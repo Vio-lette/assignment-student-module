@@ -7,8 +7,8 @@ export class StudentController {
     constructor(private readonly studentService: StudentService) { }
 
     @Post()
-    create(@Body() studentData: Partial<Student>) {
-        return this.studentService.create(studentData);
+    create(@Body() stuData: Partial<Student>) {
+        return this.studentService.create(stuData);
     }
 
     @Get()
