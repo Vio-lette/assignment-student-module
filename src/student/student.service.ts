@@ -7,11 +7,11 @@ import { Student } from './student.entity';
 export class StudentService {
     constructor(
         @InjectRepository(Student)
-        private studentRepository: Repository<Student>,
+        private studentRepo: Repository<Student>,
     ) { }
 
-    async create(studentData: Partial<Student>): Promise<Student> {
-        const student = this.studentRepository.create(studentData);
-        return this.studentRepository.save(student);
+    async create(stuData: Partial<Student>): Promise<Student> {
+        const student = this.studentRepo.create(stuData);
+        return this.studentRepo.save(student);
     }
 }
