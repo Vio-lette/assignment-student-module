@@ -29,7 +29,7 @@ export class StudentService {
     }
 
     async remove(id: number): Promise<void> {
-        await this.studentRepository.delete(id);
+        await this.studentRepo.delete(id);
     }
 
 }
