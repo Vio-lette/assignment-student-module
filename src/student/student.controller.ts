@@ -7,8 +7,8 @@ export class StudentController {
     constructor(private readonly studentService: StudentService) { }
 
     @Post()
-    create(@Body() studentData: Partial<Student>) {
-        return this.studentService.create(studentData);
+    create(@Body() stuData: Partial<Student>) {
+        return this.studentService.create(stuData);
     }
 
     @Get()
@@ -22,8 +22,8 @@ export class StudentController {
     }
 
     @Patch(':id')
-    update(@Param('id') id: number, @Body() updateData: Partial<Student>) {
-        return this.studentService.update(id, updateData);
+    update(@Param('id') id: number, @Body() upData: Partial<Student>) {
+        return this.studentService.update(id, upData);
     }
 
     @Delete(':id')
